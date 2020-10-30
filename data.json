@@ -1,0 +1,32 @@
+{
+    "headers": {
+        "0":"id",
+        "1":"libro",
+        "2":"genero", 
+        "3":"paginas",
+        "4":"autor"
+    },
+    "data":[
+        {
+            "id": "0001",
+            "libro": "El extranjero",
+            "genero": "novela filos&oacute;fica",
+            "paginas": "184",
+            "autor": "Albert Camus"
+        },
+        {
+            "id": "0002",
+            "libro": "La muerte de Iv&aacute;n Ilich",
+            "genero": "novela",
+            "paginas": "165",
+            "autor": "Le&oacute;n Tolstoi"
+        },
+        {
+            "id": "0003",
+            "libro": "El Se&ntilde;or Presidente",
+            "genero": "novela",
+            "paginas": "321",
+            "autor": "Miguel &Aacute;ngel Asturias"
+        }
+    ]
+}

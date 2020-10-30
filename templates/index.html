@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta http-equiv=”Content-Type” content=”text/html; charset=ISO-8859-1″ />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <style>
+      .avatar {
+        vertical-align: middle;
+        width: 170px;
+        height: 140px;
+        border-radius: 20%;
+        margin-bottom: 10px;
+      }
+      h2{
+        text-align: center;
+      }
+      .container{
+        display: flex;
+        height: 80vh;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10vh !important;
+      }
+
+      .row{
+        min-height: 150px;
+      }
+
+      th
+      {
+        text-align: center;
+      }
+    </style>
+</head>
+
+
+<body style="padding: 4vh;">
+  <div class="shadow-lg container" style="align-items: center; justify-content: center;">
+    <h2>
+      Libros
+    </h2>
+    <img class="avatar" src="{{image_file}}" alt="Libros">
+      <table class="table" >
+        <thead class="thead-dark">
+          <tr>
+            {% for k,v in headers.items(): %}
+                <th scope="col" >{{v}}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+            {% for row in my_data: %}
+            <tr>
+              <th scope="row">{{row.id}}</th>
+              <th scope="row">{{row.libro}}</th>
+              <th scope="row">{{row.genero}}</th>
+              <th scope="row">{{row.paginas}}</th>
+              <th scope="row">{{row.autor}}</th>
+            </tr>
+            {% endfor%}
+        </tbody>
+      </table>
+      <a class="btn btn-primary" href="/crear" role="button">Crear</a>
+    </div> 
+</body>
+</html>
